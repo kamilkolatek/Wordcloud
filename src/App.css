@@ -27,3 +27,19 @@ button {
     border-radius: 10px;
     padding: 10px;
 }
+
+.board {
+    width: 50vw;
+    font-size: 16px;
+    border: solid 1px #000000;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+
+.word {
+    position: relative;
+    width: fit-content;
+}

@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react';
 
 import StartScreen from './screens/StartScreen';
+import GameScreen from './screens/GameScreen';
 
 import { response } from './mocks/api';
 import { randomItem } from './utils/utils'
 
 import './App.css';
-
-const GameScreen = () => {
-  return <div>Game screen</div>
-}
 
 const ResultScreen = () => {
   return <div>Result screen</div>
@@ -27,7 +24,7 @@ function App() {
       case 'start-screen':
         return <StartScreen setNickname={setNickname} setCurrentScreen={setCurrentScreen}  />
       case 'game-screen':
-        return <GameScreen />
+        return <GameScreen game={game} setCurrentScreen = {setCurrentScreen} />
       case 'result-screen':
         return <ResultScreen />
       default:
