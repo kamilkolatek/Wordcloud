@@ -22,13 +22,13 @@ function App() {
   const renderScreen = () => {
     switch (currentScreen) {
       case 'start-screen':
-        return <StartScreen setNickname={setNickname} setCurrentScreen={setCurrentScreen}  />
+        return <StartScreen setNickname={setNickname} setCurrentScreen={setCurrentScreen} />
       case 'game-screen':
-        return <GameScreen game={game} setCurrentScreen = {setCurrentScreen} />
+        return <GameScreen game={game} setCurrentScreen={setCurrentScreen} />
       case 'result-screen':
         return <ResultScreen />
       default:
-        return <StartScreen setNickname={setNickname} setCurrentScreen={setCurrentScreen}  />
+        return <StartScreen setNickname={setNickname} setCurrentScreen={setCurrentScreen} />
     }
   }
 

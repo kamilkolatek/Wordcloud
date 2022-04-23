@@ -44,6 +44,22 @@ button {
     width: fit-content;
 }
 
+.label {
+    min-height: 20px;
+}
+
+.selected {
+    color: #808080;
+}
+
+.correct {
+    color: #00FF00;
+}
+
+.incorrect {
+    color: #FF0000;
+}
+
 @media only screen and (max-width: 1024px) {
     .board {
         width: 80vw;
