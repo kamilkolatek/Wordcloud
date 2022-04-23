@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import StartScreen from './screens/StartScreen';
+
+import { response } from './mocks/api';
+import { randomItem } from './utils/utils'
 
 import './App.css';
 
@@ -14,7 +17,10 @@ const ResultScreen = () => {
 
 function App() {
   const [nickname, setNickname] = useState('');
+  const [game, setGame] = useState({});
   const [currentScreen, setCurrentScreen] = useState('start-screen');
+
+  useEffect(() => setGame(randomItem(response)));
 
   const renderScreen = () => {
     switch (currentScreen) {
