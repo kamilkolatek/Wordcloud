@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getRandom } from '../utils/utils'
+import SingleWord from '../components/SingleWord';
 
 const GameScreen = ({ setCurrentScreen, game }) => {
     const [isChecked, setIsChecked] = useState(false);
@@ -16,7 +16,7 @@ const GameScreen = ({ setCurrentScreen, game }) => {
         <>
             <h1>{game.question}</h1>
             <div className="board">
-                {game.all_words.map((word) => <div style={{marginLeft: getRandom(10, 90) + '%'}} className="word">{word}</div>
+                {game.all_words.map((word) => <SingleWord word={word} />
                 )}
             </div>
             <button onClick={() => handleClick()}>{isChecked ? 'finish game' : 'check answers'}</button>
