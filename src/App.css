@@ -13,3 +13,17 @@ body {
     align-items: center;
     text-align: center;
 }
+
+.nickname-input {
+    width: 100%;
+    padding: 10px;
+}
+
+button {
+    margin: 10px;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    border: solid 1px #3989DE;
+    border-radius: 10px;
+    padding: 10px;
+}
