@@ -15,7 +15,7 @@ function App() {
   const [game, setGame] = useState({});
   const [currentScreen, setCurrentScreen] = useState('start-screen');
 
-  useEffect(() => setGame(randomItem(response)));
+  useEffect(() => setGame(randomItem(response)), []);
 
   const renderScreen = () => {
     switch (currentScreen) {
