@@ -1,13 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import { getRandom } from '../utils/utils'
 
-const SingleWord = ({ word, isChecked, isCorrect }) => {
+const SingleWord = ({ toggleWord, word, isChecked, isCorrect }) => {
     const [isSelected, setIsSelected] = useState(false);
     const marginLeft = useMemo(() => getRandom(10, 90) + '%', []);
 
     const handleClick = () => {
         if (isChecked) return;
         setIsSelected(!isSelected);
+        toggleWord(word);
     }
 
     const getClassName = () => {
